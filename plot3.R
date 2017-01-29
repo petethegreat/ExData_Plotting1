@@ -19,9 +19,9 @@ data<-data[data$time >= "2007-02-01" & data$time < "2007-02-03",]
 # plot the data
 png(filename='./plot3.png')
 
- with(data,plot(x=time,y=SubMetering1,type='n',ylab='Energy sub metering'))
+ with(data,plot(x=time,y=SubMetering1,type='n',ylab='Energy sub metering',xlab=''))
  with(data,points(x=time,y=SubMetering1,type='l'))
  with(data,points(x=time,y=SubMetering2,type='l',col='red'))
  with(data,points(x=time,y=SubMetering3,type='l',col='blue'))
- legend('topright',lty=1,col=c('black','red','blue'),legend=c('sub_metering_1','sub_metering_2','sub_metering_3'))
+ legend('topright',lty=1,col=c('black','red','blue'),legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'))
  dev.off()
